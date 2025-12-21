@@ -1,1 +1,0 @@
-Consola.log("Hello World");

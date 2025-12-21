@@ -12,10 +12,9 @@
   },
   "license": "ISC",
   "author": "Sebastian Vasquez",
-  "type": "commonjs",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch src/index.ts"
   },
   "dependencies": {
     "accepts": "^2.0.0",
@@ -83,5 +82,9 @@
     "unpipe": "^1.0.0",
     "vary": "^1.1.2",
     "wrappy": "^1.0.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
