@@ -14,7 +14,9 @@
   "author": "Sebastian Vasquez",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "node --watch src/index.ts"
+    "build": "tsc",
+    "dev": "node --watch src/index.ts",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "accepts": "^2.0.0",
