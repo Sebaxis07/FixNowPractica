@@ -12,6 +12,7 @@
   },
   "license": "ISC",
   "author": "Sebastian Vasquez",
+  "type": "module",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
@@ -28,6 +29,7 @@
     "content-type": "^1.0.5",
     "cookie": "^0.7.2",
     "cookie-signature": "^1.2.2",
+    "cors": "^2.8.5",
     "debug": "^4.4.3",
     "depd": "^2.0.0",
     "dotenv": "^17.2.3",
@@ -88,6 +90,7 @@
     "wrappy": "^1.0.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }

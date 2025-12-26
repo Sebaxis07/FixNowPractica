@@ -11,6 +11,7 @@ export const MongoDB = async () => {
         const conexion = await mongoose.connect(URL);
         console.log('Conectado a MongoDB');
         console.log(`Host: ${conexion.connection.host}, en el puerto ${conexion.connection.port}`);
+        console.log(`APIREST FUNCIONANDO: http://${process.env.IP_SERVER}:${process.env.PORT}${process.env.API_VERSION}`)
     } catch (error) {
         console.error('Error connecting to MongoDB:', error);
         process.exit(1);

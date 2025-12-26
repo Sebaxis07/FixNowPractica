@@ -1,13 +1,18 @@
 import { Router } from "express";
-import ClienteSchema from "./models/Cliente.ts";
+import { createAccountClient, createAccountTecnico } from "./handlers/index.ts";
+
 const router = Router();
 
-//Auth Register y Login
-router.post('/auth/register', async (req, res) => {
-    await ClienteSchema.create(req.body)
-})
-router.get('/auth/login', (req, res) => {
+//Auth Register y Login Cliente
+router.post('/auth/register/cliente', createAccountClient)
+router.get('/auth/login/cliente', (req, res) => {
     res.send('login')
+})
+
+//Auth Register y Login Tecnico
+router.post('/auth/register/tec', createAccountTecnico)
+router.get('/auth/login/tec', (req, res) => {
+
 })
 
 
