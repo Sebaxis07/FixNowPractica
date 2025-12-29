@@ -2,6 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 
 interface ITecnico {
+    handler: string;
     id_tecnico: number;
     nombre: string;
     apellido: string;
@@ -14,6 +15,13 @@ interface ITecnico {
 
 
 const TecnicoSchema: Schema<ITecnico> = new Schema({
+    handler: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+        lowercase: true
+    },
     id_tecnico: {
         type: Number,
         required: true,

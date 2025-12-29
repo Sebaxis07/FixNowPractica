@@ -2,6 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 
 interface ICliente {
+    handler: string;
     nombre: string;
     apellido: string;
     email: string;
@@ -11,6 +12,13 @@ interface ICliente {
 }
 
 const ClienteSchema: Schema<ICliente> = new Schema({
+    handler: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+        lowercase: true
+    },
     nombre: {
         type: String,
         required: true
